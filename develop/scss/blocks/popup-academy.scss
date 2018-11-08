@@ -1,0 +1,95 @@
+//____________________popup-academy
+.popup__academy {   
+    display: none;
+    //display: block;    
+}
+.popup__academy-info {
+    @include article-bold;
+    text-align: center;
+    color: $blue-main;
+    //text-transform: uppercase;
+}
+//____________________popup-global-style
+.popup--show {    
+    display: block !important;        
+}
+.popup__academy-back {
+    display: none;
+    //display: block;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);    
+    z-index: 100000;
+}
+.popup__academy-front {
+    display: none;  
+    //display: block;  
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-250px);
+    width: 500px;    
+    height: 200px;
+    padding: 50px;
+    background-color: white;
+    z-index: 200000;
+}
+.popup__academy-btn--close { 
+    display: none;  
+    //display: block; 
+    position: fixed;
+    top: 100px;
+    right: 50%;
+    transform: translateX(300px);
+    z-index: 300000;    
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;   
+    border: none;
+    //border: 2px solid red;
+    &:hover,    
+    &:focus {       
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 10px;
+      width: 30px;
+      height: 4px;
+      background-color: #ffffff;
+    }
+    &::before {
+      transform: rotate(45deg);     
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+}
+@media screen and (max-width: $mobile-width) {
+    .popup__academy-info {     
+        //font-size: 18px;        
+    }
+    .popup__academy-front {        
+        top: 100px;
+        left: 50%;
+        transform: translateX(-160px);
+        width: 320px;
+        height: 200px;
+        padding: 40px 20px;        
+    }
+    .popup__academy-btn--close {        
+        top: 50px;
+        right: 50%;        
+        width: 50px;
+        height: 50px;
+        transform: translateX(160px);               
+    }
+}

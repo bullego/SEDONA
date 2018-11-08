@@ -1,0 +1,28 @@
+.btn__scroll-top {
+	display: none;	
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	bottom: 165px;
+	right: 60px;
+	background: url("../img/scrollup_medium.png") no-repeat;
+	opacity: 0.3;
+	border: none;
+	cursor: pointer;
+	z-index: 9999;
+}
+.btn__scroll-top:focus, .btn__scroll-top:hover {
+	outline: none;
+	opacity: 0.4;
+}
+.show-scroll {
+	display: block;
+}
+@media (max-width: 768px) {
+	.btn__scroll-top {
+		width: 40px;
+		height: 40px;
+		background: url("../img/scrollup_small.png") no-repeat;
+		right: 15px;
+	}
+}

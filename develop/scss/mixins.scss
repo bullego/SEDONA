@@ -1,0 +1,21 @@
+@mixin main-nav-text {
+	font-family: 'PT Sans', "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 26px;
+	font-style: normal;
+	font-weight: 700;
+}
+@mixin article-bold {
+	font-family: 'PT Sans', "Arial", sans-serif;
+	font-size: 21px;
+	line-height: 26px;
+	font-style: normal;
+	font-weight: 700;
+}
+@mixin article {
+	font-family: 'PT Sans', "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 26px;
+	font-style: normal;
+	font-weight: 400;
+}

@@ -1,0 +1,18 @@
+@font-face {
+	font-display: swap; // свойство font-display для современных браузеров (старые загрузять шрифты по своему). У swap нет блокировки отображения шрифта, если нужный шрифт не успел загрузиться браузером.. + бесконечное ожидание подмены стандартного/системного шрифта (Arial) на нужный шрифт (Droid)
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Sans"), //проверяем наличие шрифта в ОС пользователя
+  		 url("../fonts/ptsans.woff2") format("woff2"),//если шрифт не установлен, тогда загружаем его с сервера по указанному пути(без установки в ОС пользователя)
+    	 url("../fonts/ptsans.woff") format("woff");//если шрифт не установлен, тогда загружаем его с сервера по указанному пути(без установки в ОС пользователя)
+}
+@font-face {
+	font-display: swap;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Sans Bold"),
+   		 url("../fonts/ptsansbold.woff2") format("woff2"),
+  		 url("../fonts/ptsansbold.woff") format("woff");
+}

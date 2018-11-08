@@ -1,0 +1,290 @@
+.popup__hotel {   
+    display: none;
+    //display: block;   
+}
+.popup__hotel-form {
+    //margin: 0 auto;
+}
+.pform-hotel {
+    width: 600px;
+    height: 460px;
+    //border: 1px solid red;
+}
+.pform-hotel__fieldset {    
+    //border: 1px solid red;
+}
+.pform-hotel__legend {
+    width: 100%;
+    height: 126px;
+    padding: 40px 0px;
+    margin-bottom: 28px;
+    @include article-bold;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white-text;
+    //background-color: #82b3d3;
+    background-image: url(../img/popup-hotel-blue-triangle.png),
+                      url(../img/popup-hotel-bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    //border: 1px solid red;
+}
+.pform-hotel__date-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 66px;
+    //border: 1px solid red;
+}
+.pform-hotel__date {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    width: 456px;
+    //height: 50px;
+}
+.pform-hotel__date--text {
+    margin-right: 10px;
+    @include article;       
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.pform-hotel__date--input {
+    width: 350px;
+    height: 50px;
+    padding: 14px 22px;
+    background-color: $grey-main;
+    border: none;
+}
+.pform-hotel__date--icon {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    background-image: url(../img/popup-hotel-calendar-icon.png);
+    border: none;
+    cursor: pointer;
+    z-index: 50000;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+.pform-hotel__count {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 228px;
+    //border: 1px solid red;
+}
+.pform-hotel__count--text {
+    margin-right: 10px;
+    @include article;       
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.pform-hotel__count--select {
+    width: 121px;
+    height: 50px;
+    padding: 14px 22px;
+    background-color: $grey-main;
+    border: none;
+    appearance: none;   
+}
+.pform-hotel__count--select-icon { 
+    position: absolute; 
+    top: 21px;
+    right: 20px;  
+    width: 14px;
+    height: 9px;  
+    background-color: transparent; 
+    background-image: url(../img/popup-hotel-select-icon.png);
+    border: none;
+    //border: 1px solid red;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+.pform-hotel__btn--wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding: 22px 76px;
+    //margin-bottom: 20px;
+}
+.pform-hotel__btn { 
+    padding: 20px 90px; 
+    border: none;
+    background-color: #81b3d2;
+    @include article-bold;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $white-text;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $blue-hover;
+        outline: none;
+    }
+    &:active {
+        background-color: $blue-down;
+    }
+}
+
+
+//____________________popup-global-style
+.popup--show {    
+    display: block !important;        
+}
+.popup__hotel-back {
+    display: none;
+    //display: block;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);    
+    z-index: 100000;
+}
+.popup__hotel-front {
+    display: none;  
+    //display: block;  
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-300px);
+    width: 600px;
+    height: 460px;   
+    background-color: $white-bg;
+    z-index: 200000;
+}
+.popup__hotel-btn--close { 
+    display: none;  
+    //display: block; 
+    position: fixed;
+    top: 100px;
+    right: 50%;
+    transform: translateX(300px);
+    z-index: 300000;    
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;   
+    border: none;
+    //border: 2px solid red;
+    &:hover,    
+    &:focus {       
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 10px;
+      width: 30px;
+      height: 4px;
+      background-color: #ffffff;
+    }
+    &::before {
+      transform: rotate(45deg);     
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+
+    .pform-hotel {
+        width: 320px;
+        min-height: 580px;
+        //border: 1px solid red;
+    }       
+    .pform-hotel__legend {
+        width: 100%;
+        height: 100px;
+        padding: 40px 0px;
+        margin-bottom: 20px;        
+        font-size: 24px;
+        line-height: 1; 
+        background: none !important;        
+        background-color: $blue-main !important;
+        //border: 1px solid yellow;
+    }
+    .pform-hotel__date-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 20px;
+        width: 320px;
+        //border: 1px solid red;
+    }
+    .pform-hotel__date {       
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        width: 280px;   
+        //border: 1px solid red;    
+    }   
+    .pform-hotel__date--input {
+        width: 280px;       
+        padding: 14px 22px;     
+    }
+    .pform-hotel__date--icon {      
+        top: 61px;
+        right: 15px;            
+    }
+    .pform-hotel__count {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: space-between;
+        width: 130px;       
+        //border: 1px solid red;
+    }   
+    .first-count--margin-right {
+        margin-right: 20px;
+    }   
+    .pform-hotel__count--select {
+        width: 140px;       
+        padding: 14px 22px;        
+    }
+    .pform-hotel__count--select-icon {       
+        top: 71px;
+        right: 20px;       
+    }
+    .pform-hotel__btn--wrap {
+        display: flex;
+        justify-content: center;
+        padding: 32px 0px;
+    }
+    .pform-hotel__btn { 
+        padding: 20px 36px;     
+    }
+
+    //____________________popup-global-style
+    .popup__hotel-front {       
+        top: 100px;
+        left: 50%;
+        transform: translateX(-160px);
+        width: 320px;
+        min-height: 580px;      
+    }
+    .popup__hotel-btn--close {     
+        top: 100px;
+        right: 50%;
+        transform: translateX(160px);   
+    }   
+
+} 

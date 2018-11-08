@@ -1,0 +1,24 @@
+//____________________global
+@import "fonts.scss";    
+@import "mixins.scss";
+@import "variables.scss";
+@import "global-style.scss";
+
+//____________________blocks
+@import "blocks/page-border.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/promo-country.scss";
+@import "blocks/reasons.scss";
+@import "blocks/media.scss";
+@import "blocks/media-photo.scss";
+@import "blocks/media-video.scss";
+@import "blocks/form.scss";
+@import "blocks/form-feedback.scss";
+@import "blocks/search-hotel.scss";
+@import "blocks/map.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/popup-academy.scss";
+@import "blocks/popup-hotel.scss";
+@import "blocks/btn-scroll-up.scss"; 

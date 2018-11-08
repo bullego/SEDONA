@@ -1,0 +1,55 @@
+.page-footer {
+	width: 100%;
+	min-height: 120px;
+	padding: 32px 0px;	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.page-footer__hashtag {
+	@include article-bold;	
+}
+.page-footer__develop {
+	display: flex;
+	align-items: center;
+}
+
+.develop__by {
+	//margin-right: 12px;
+	@include article;
+}
+.develop__link {
+	width: 44px;
+	height: 56px;
+	//border: 1px solid red;
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+.develop__link--company {
+	width: 44px;
+	height: 56px;
+	fill: #000000;			
+}
+.develop__link:hover .develop__link--company,
+.develop__link:focus .develop__link--company {
+	fill: $blue-main;	
+}
+
+
+@media screen and (max-width: $mobile-width) {
+	.page-footer {
+		display: flex;
+		flex-direction: column;
+		padding-top: 38px;
+		padding-bottom: 23px;
+	}
+	.page-footer__hashtag {
+		padding-bottom: 38px;
+	}
+	.page-footer__social {
+		padding-bottom: 38px;
+	}
+}
