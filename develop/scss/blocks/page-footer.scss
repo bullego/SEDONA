@@ -37,7 +37,12 @@
 .develop__link:focus .develop__link--company {
 	fill: $blue-main;	
 }
-
+.page-footer__hashtag {
+	width: 140px;
+}
+.develop__by {
+	width: 90px;
+}
 
 @media screen and (max-width: $mobile-width) {
 	.page-footer {

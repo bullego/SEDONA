@@ -1,3 +1,4 @@
+
 .form {
 	display: flex;
 	flex-wrap: wrap;	
@@ -12,23 +13,30 @@
 	width: 480px;
 	border: none;
 	border-right: 1px solid $grey-line;	
+	//border: 1px solid red;
 }
 .form__legend--impress {
 	padding-left: 80px;
+	padding-right: 20px;
 	margin-bottom: 63px;
 	@include article-bold;
 	text-align: left;	
 	text-transform: uppercase;	
+	//border: 1px solid red;
 }
-.form__label-impress--wrap {
+.form__label-impress--wrap {	
+	padding-right: 160px;
 	display: flex;
 	flex-direction: column;
+	//border: 1px solid red;
 }
 .form__label-impress {	
+	display: flex;
+	align-items: center;
 	min-height: 56px;
-	margin-bottom: 22px;	
+	margin-bottom: 22px;
 }
-.radio-custom {
+.radio-custom {	
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -75,6 +83,8 @@
 	background-color: $grey-text;					
 }
 .form__label-impress--text {
+	display: inline-block;	
+	width: 200px;	
 	@include article-bold;
 	font-size: 18px;
 	cursor: pointer;
@@ -98,18 +108,21 @@
 	text-transform: uppercase;	
 }
 .form__label-intro--wrap {
+	width: 400px;
 	display: flex;
 	flex-direction: column;
 }
 .form__label-intro {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	margin-bottom: 20px;
 }
 .form__label-intro--text {
 	margin-right: 12px;
 	@include article;
-	line-height: 58px;
+	//line-height: 58px;
+	line-height: 1.4;
 	text-transform: uppercase;
 }
 .form__label-intro--input {
@@ -139,7 +152,8 @@
 	border: none;
 	border-top: 1px solid $grey-line;	
 }
-.form__legend--contact {	
+.form__legend--contact {
+	width: 440px;	
 	padding: 0px 75px;
 	margin-bottom: 63px;
 	@include article-bold;
@@ -153,12 +167,16 @@
 .form__label-contact {
 	display: flex;	
 	justify-content: space-between;
+	align-items: center;
+	margin-left: 5px;
+	margin-right: 5px;
 	//border: 1px solid red;
 }
 .form__label-contact--text {
 	margin-right: 15px;
 	@include article;
-	line-height: 58px;
+	//line-height: 58px;
+	line-height: 1.4;
 	text-transform: uppercase;
 }
 .form__label-contact--input {
@@ -205,10 +223,14 @@
 	display: flex;
 	justify-content: space-between;	
 }
+.form__label-visited {
+	display: flex;
+	align-items: center;
+	//width: 202px;
+}
 .checkbox-custom {
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block;    
     margin-right: 20px;
     width: 56px;
     height: 56px;
@@ -234,6 +256,8 @@
 	background-color: $grey-down;				
 } 
 .form__label-visited--text {
+	width: 126px;
+	display: inline-block;
 	@include article-bold;
 	font-size: 18px;	
 	cursor: pointer;
@@ -251,6 +275,7 @@
 	border-top: 1px solid $grey-line;
 }
 .form__legend--message {
+	width: 440px;
 	padding: 0px 75px;
 	margin-bottom: 62px;
 	@include article-bold;
@@ -304,6 +329,7 @@ textarea:-ms-input-placeholder {
 	display: flex;
 	flex-direction: row;	
 	justify-content: space-between;
+	align-items: center;
 }
 .form__btn--submit {
 	padding: 21px 148px;
@@ -326,10 +352,13 @@ textarea:-ms-input-placeholder {
 	}
 }
 .form__attention-area {
+	width: 170px;
 	@include article;
-	line-height: 63px;
+	//line-height: 63px;
+    line-height: 1;
 	text-transform: uppercase;
 }
+
 
 @media screen and (max-width: $tablet-width) {	
 	.form {
@@ -339,16 +368,24 @@ textarea:-ms-input-placeholder {
 	}
 	.form__fieldset--impress {
 		width: 324px;
+		//border: 1px solid green;
 	}
 	.form__legend--impress {
 		padding: 0px;		
 	}
+	.form__label-impress--wrap {
+		width: 100%;
+    	padding-right: 0px;
+    }
 
 	.form__fieldset--intro {
 	    width: 324px;
 	    padding-left: 60px;
 	    //border: 1px solid red;
 	}
+	.form__label-intro--wrap {
+    	width: 100%;
+    }
 	.form__label-intro--input {
     	width: 178px;
     }
@@ -369,10 +406,14 @@ textarea:-ms-input-placeholder {
 	.form__label-contact {
 		position: relative;
 		display: flex;
-		flex-direction: column;		
+		flex-direction: column;	
+		align-items: flex-start;
+		margin-bottom: 30px;	
 	}
 	.form__label-contact--text {
+		width: 50%;
 		margin-left: 20px;
+		margin-bottom: 10px;
 	}	
 	.form__label-contact--input {
 		width: 100%;
@@ -392,7 +433,7 @@ textarea:-ms-input-placeholder {
 		//border: 1px solid red;
 	}
 	.form__label-visited {		
-		margin: 16px 40px;	    
+		margin: 16px 27px;	    
 	}
 	.form__label-visited:last-child {		
 	    margin-right: 27px;	    
@@ -400,6 +441,10 @@ textarea:-ms-input-placeholder {
 
 	.form__btn--submit {
     	padding: 21px 62px;
+    }
+    .form__attention-area {
+    	//width: 170px;
+    	//line-height: 1;
     }
 }
 @media screen and (max-width: $mobile-width) {
@@ -459,7 +504,7 @@ textarea:-ms-input-placeholder {
 		width: 320px;
 		margin: 0 auto;
 		margin-top: 20px;
-		padding: 0 20px;
+		padding: 0px;
 		padding-bottom: 30px;
 		border: none;
 		border-bottom: 1px solid $grey-line;
@@ -467,6 +512,7 @@ textarea:-ms-input-placeholder {
 		//border: 1px solid red;
 	}
 	.form__legend--contact {
+		width: 100%;
 		padding: 0;
 		margin-bottom: 10px;
 		text-align: center;
@@ -511,6 +557,7 @@ textarea:-ms-input-placeholder {
 		//border: 1px solid red;				
 	}	
 	.form__legend--message {
+		width: 100%;
 		padding: 0;
 		margin-bottom: 20px;
 		text-align: center;

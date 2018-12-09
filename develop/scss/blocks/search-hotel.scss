@@ -1,5 +1,6 @@
 .search-hotel {
 	width: 100%;
+	padding: 0px 360px;
 	padding-top: 55px;
 	padding-bottom: 65px;
 	//border: 1px solid red;
@@ -45,8 +46,17 @@
 	}
 }
 
+@media screen and (max-width: $tablet-width) {
+	.search-hotel {		
+		padding: 0px 140px;	
+		padding-top: 55px;	
+		padding-bottom: 60px;
+	}
+}
+
 @media screen and (max-width: $mobile-width) {
 	.search-hotel {
+		padding: 0px;
 		padding-top: 30px;
 		padding-bottom: 50px;
 	}
